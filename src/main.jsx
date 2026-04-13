@@ -6,26 +6,22 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './Componets/Home/Home.jsx'
 import FriendDetails from './Componets/FriendDetails/FriendDetails.jsx'
 import TimeLine from './Componets/TimeLine/TimeLine.jsx'
-import Stats from './Componets/Stats/Stats.jsx'
+import Root from './Componets/Root/Root.jsx'
+
+
+
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    Component: Home
+    loader: () => fetch("public/friends.json"),
+    Component: Root,
+    children: [
+      {index: true, Component: Home},
+      {path: '/TimeLine', Component: TimeLine}
+    ],
   },
-  {
-    path: '/FriendDetails',
-    Component: FriendDetails
-  },
-  {
-    path: '/TimeLine',
-    Component: TimeLine
-  },
-  {
-    path: '/Stats',
-    Component: Stats
-  }
 ])
 
 
