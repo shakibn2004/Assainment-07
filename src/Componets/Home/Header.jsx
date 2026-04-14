@@ -1,9 +1,11 @@
 import { ChartLine, Clock3, House } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router";
 
 const Header = () => {
+  const [toggle, setToggle] = useState('home')
   return (
-    <div>
+    <div className="sticky top-0 bg-white z-10">
       <header>
         <nav className="max-w-360 w-[90%] justify-between mx-auto flex py-4">
           <div className="nav-start">
@@ -16,18 +18,24 @@ const Header = () => {
           </div>
 
           <ul className="nav-end flex">
-            <li className="px-4 py-3 flex gap-1 btn">
-              <House />
-              Home
-            </li>
-            <li className="px-4 py-3 flex gap-1 ">
-              <Clock3 />
-              TimeLine
-            </li>
-            <li className="px-4 py-3 flex gap-1 ">
-              <ChartLine />
-              Stats
-            </li>
+            <Link to={'/'}>
+              <li onClick={() => setToggle("home")} className={`px-4 py-3 flex gap-1 ${toggle === "home" ? "btn" : ""}`}>
+                <House />
+                Home
+              </li>
+            </Link>
+            <Link to={'/timeline'}>
+              <li onClick={() => setToggle("timeline")} className={`px-4 py-3 flex gap-1 ${toggle === "timeline" ? "btn" : ""}`}>
+                <Clock3 />
+                TimeLine
+              </li>
+            </Link>
+            <Link to={'/stats'}>
+              <li onClick={() => setToggle("stats")} className={`px-4 py-3 flex gap-1 ${toggle === "stats" ? "btn" : ""}`}>
+                <ChartLine />
+                Stats
+              </li>
+            </Link>
           </ul>
         </nav>
       </header>
