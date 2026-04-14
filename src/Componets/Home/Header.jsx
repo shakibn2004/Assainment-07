@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 const Header = () => {
-  const [toggle, setToggle] = useState('home')
+  const [toggle, setToggle] = useState(localStorage.getItem("status"));
   return (
     <div className="sticky top-0 bg-white z-10">
       <header>
@@ -19,19 +19,19 @@ const Header = () => {
 
           <ul className="nav-end flex">
             <Link to={'/'}>
-              <li onClick={() => setToggle("home")} className={`px-4 py-3 flex gap-1 ${toggle === "home" ? "btn" : ""}`}>
+              <li onClick={() => {setToggle("home"); localStorage.setItem('status', 'home')}} className={`px-4 py-3 flex gap-1 ${toggle === "home" ? "btn" : ""}`}>
                 <House />
                 Home
               </li>
             </Link>
             <Link to={'/timeline'}>
-              <li onClick={() => setToggle("timeline")} className={`px-4 py-3 flex gap-1 ${toggle === "timeline" ? "btn" : ""}`}>
+              <li onClick={() => {setToggle("timeline"); localStorage.setItem('status', 'timeline')}} className={`px-4 py-3 flex gap-1 ${toggle === "timeline" ? "btn" : ""}`}>
                 <Clock3 />
                 TimeLine
               </li>
             </Link>
             <Link to={'/stats'}>
-              <li onClick={() => setToggle("stats")} className={`px-4 py-3 flex gap-1 ${toggle === "stats" ? "btn" : ""}`}>
+              <li onClick={() => {setToggle("stats"); localStorage.setItem('status', 'stats')}} className={`px-4 py-3 flex gap-1 ${toggle === "stats" ? "btn" : ""}`}>
                 <ChartLine />
                 Stats
               </li>
