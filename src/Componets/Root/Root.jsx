@@ -15,7 +15,7 @@ const Root = () => {
         value={{ friends, currentFrieend, setCurrentFriend, friendInteraction, setFriendInteraction }}
       >
         <Header />
-        <main className="flex-grow">
+        <main className="grow">
           <Outlet />
         </main>
         <Footer />

@@ -1,7 +1,3 @@
-import { ChartLine, Clock3, House } from "lucide-react";
-import React from "react";
-import { Link } from "react-router";
-import Header from "./Header";
 import Banner from "./Banner";
 import Main from "./Main";
 import Counter from "./Counter";
