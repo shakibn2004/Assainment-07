@@ -117,11 +117,11 @@ const FriendDetails = () => {
               <div className="check-in space-y-3 py-6">
                 <h1 className="text-[20px] font-medium primary">Quick Check-In</h1>
                 <div className="bottom grid grid-cols-3 place-items-center">
-                  <div onClick={() => { handleFrInteraction({ name: name, icon: "call" }) }} className="icon py-4 px-3 space-y-2">
+                  <div onClick={() => { handleFrInteraction({ name: name, icon: "meetup" }) }} className="icon py-4 px-3 space-y-2">
                     <PhoneCall />
                     <p>Call</p>
                   </div>
-                  <div onClick={() => { handleFrInteraction({ name: name, icon: "chat" }) }} className="icon py-4 px-3 space-y-2">
+                  <div onClick={() => { handleFrInteraction({ name: name, icon: "text" }) }} className="icon py-4 px-3 space-y-2">
                     <MessageSquareMore />
                     <p>Text</p>
                   </div>
