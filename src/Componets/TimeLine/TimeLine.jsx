@@ -35,7 +35,7 @@ const TimeLine = () => {
         return capitalized;
     }
     return (
-        <div className='timeline py-20 mx-auto max-w-277.5 w-[90%] md:w-[70%]'>
+        <div className='py-20 mx-auto max-w-277.5 w-[90%] md:w-[70%]'>
             <div className="timeline-header space-y-10">
                 <div className="title flex justify-between items-center gap-5">
                     <h1 className='text-3xl md:text-5xl font-bold'>Timeline</h1>

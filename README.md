@@ -1,16 +1,43 @@
-# React + Vite
+### Name of The Project:
+Friend Interaction Traker
+<br>
+<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Discription:
+This web application can track the interaction happend with friends.Like call, chat and video chat.
+for getting an overview of interaction the pie system integrated with this project.
+<br>
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+# Technology:
+* Javascript
+* React.js
+* React Router
+* Tailwind CSS
+* Daisy UI
+* Lucide Icon
+* React Toast
+* JSON 
+<br>
+<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Features of the Project:
+* In the home page total friends number and interaction count will show.
+* And below the counter section there will be show a overview of every friend.
+* Clicking on a friend card a new route open and show the details of the friend.
+* Saying on the friend details route and clicking on call, chat or video button there will be show a toast  
+  notification and the interaction type will be added to timeline route with interacvtion date.
+* In the navbar there will be three menu links clicking on any menu item the route will be changed as the menu 
+  link name.
+* Clicking on the timeline menu there will be show the total interaction with a card format showing the 
+  interaction type, the person with whom the interaction happend, interaction date and interaction Icon.
+* There also has a filter option by which it can be possible to filter the interaction card by newest, oldest, 
+  Meetup, Text and Video.
+* Along the timeline text there implement a search functionality. In the search box there can be search the 
+  cards by the interacting person name and interactrion name.
+* At last the stats routes create where a total overview of the interaction by showing in a pie chart with the 
+  interaction type like, call, text and video.
+* #Clicking on the navbar logo the home route will appear!

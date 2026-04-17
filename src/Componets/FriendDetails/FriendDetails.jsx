@@ -50,7 +50,7 @@ const FriendDetails = () => {
             <div className="friend py-10 px-5 w-fit shadow-[0_0_2px_#000]/40 space-y-1 flex flex-col items-center">
               <img className="rounded-full w-20" src={picture} alt={name} />
               <h1 className="font-semibold text-[20px]">{name}</h1>
-              <div className="status grid place-items-center">
+              <div className="grid place-items-center">
                 <p
                   className={`capitalize w-fit text-white rounded-full px-2 py-1.5 text-[14px] text-center ${status === "ok" ? "bg-green-500" : "bg-red-500"
                     }`}

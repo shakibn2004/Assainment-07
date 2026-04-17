@@ -18,7 +18,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div onClick={() => setMenu(true)} className="menu sm:hidden">
+          <div onClick={() => setMenu(true)} className="sm:hidden">
             <Menu size={30} />
           </div>
 
@@ -44,7 +44,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className={`${menu? 'block' : "hidden"}`}>
-          <div className={`menu-slider flex shadow-[0_0_2px_#000]/40 ${menu ? "translate-x-0" : "translate-x-full"} transition-all duration-300 flex-col gap-10 max-w-100 w-[90%] bg-white absolute h-screen right-0 top-0`}>
+          <div className={`flex md:hidden shadow-[0_0_2px_#000]/40 ${menu ? "translate-x-0" : "translate-x-full"} transition-all duration-300 flex-col gap-10 max-w-100 w-[90%] bg-white absolute h-screen right-0 top-0`}>
 
             <h1 onClick={() => setMenu(false)} className="self-end w-fit mr-7 mt-4"><X size={30} strokeWidth={3} /></h1>
             <ul className="flex flex-col gap-5 w-[70%] ml-5">
