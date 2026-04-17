@@ -35,17 +35,17 @@ const TimeLine = () => {
         return capitalized;
     }
     return (
-        <div className='timeline py-20 mx-auto max-w-277.5 w-[70%]'>
+        <div className='timeline py-20 mx-auto max-w-277.5 w-[90%] md:w-[70%]'>
             <div className="timeline-header space-y-10">
-                <div className="title flex justify-between items-center">
-                    <h1 className='text-5xl font-bold'>Timeline</h1>
-                    <input onChange={(d) => handleSearch(d.target.value)} type="search" placeholder="Enter Your Keyword Here" className="shadow-[0_0_2px_#000] h-fit py-2 px-3 rounded focus:outline-none" />
+                <div className="title flex justify-between items-center gap-5">
+                    <h1 className='text-3xl md:text-5xl font-bold'>Timeline</h1>
+                    <input onChange={(d) => handleSearch(d.target.value)} type="search" placeholder="Enter Your Keyword Here" className="shadow-[0_0_2px_#000]/40 h-fit py-2 px-3 rounded w-full sm:w-fit focus:outline-none" />
                 </div>
-                <div className="flex justify-between items-center">
-                    <p className='text-[18px] secondary'>Filter Timeline</p>
+                <div className="flex flex-col sm:flex-row justify-between gap-5">
+                    <p className='text-[18px] secondary self-start'>Filter Timeline</p>
                     <div className="sort flex gap-3 items-center">
                         <p className="text-2xl">Sort By:</p>
-                        <select onChange={(e) => handleFilter(e.target.value)} name="" id="1" className="focus:outline-none py-2 px-3 shadow-[0_0_2px_#000]/50 rounded">
+                        <select onChange={(e) => handleFilter(e.target.value)} name="" id="1" className="focus:outline-none py-2 px-3 shadow-[0_0_2px_#000]/40 rounded">
                             <option value="default">Default Value</option>
                             <option value="default">Newest</option>
                             <option value="oldest">Oldest</option>
@@ -57,10 +57,10 @@ const TimeLine = () => {
                 </div>
             </div>
 
-            <div className="timeline-card-container py-6 space-y-10">
+            <div className="timeline-card-container py-6 space-y-10 mt-5">
                 {
                     filterItems.length === 0
-                        ? <h1 className="text-4xl text-center mt-10 font-bold leading-12">You Have No Interaction With Your Friends😫 <br /> Or <br />Your Search Keyword Does Not Match With The TimeLine Items</h1>
+                        ? <h1 className="text-2xl md:text-4xl text-center mt-10 font-bold leading-12">You Have No Interaction With Your Friends😫 <br /> Or <br />Your Search Keyword Does Not Match With The TimeLine Items</h1>
                         :
                         (
                             filterItems.map(frInteraction => {

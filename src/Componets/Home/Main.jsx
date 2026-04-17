@@ -13,12 +13,12 @@ const Main = () => {
   return (
     <div>
       <h1 className="text-2xl font-semibold">Your Friends</h1>
-      <div className="friends-container grid grid-cols-4">
+      <div className="friends-container grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
         {friends.map((friend) => {
           const { id, name, picture, tags, status } = friend;
           return (
             <Link to={`/frienddetails/${id}`}>
-              <div onClick={() => handleFriend(friend)} className="card p-6" key={id}>
+              <div onClick={() => handleFriend(friend)} className="card p-6 shadow-[0_0_2px_#000]/40 rounded" key={id}>
                 <img
                   className="rounded-full mx-auto"
                   src={picture}

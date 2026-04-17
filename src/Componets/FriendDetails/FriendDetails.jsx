@@ -40,14 +40,14 @@ const FriendDetails = () => {
     <div>
       {
         typeof (name) === "undefined" ? (
-          <div className="flex flex-col justify-center w-fit mx-auto gap-4 mt-30">
+          <div className="flex flex-col justify-center w-fit mx-auto gap-4 mt-10 mb-5">
             <h1 className="text-3xl text-center">Ohh! You refesh the page, <br /> Please go back and try again</h1>
             <button className="btn w-fit mx-auto"><Link to={'/'}>Go Back</Link></button>
           </div>
         ) : (
-          <div key={id} className="friend-details flex max-w-277.5 w-[70%] mx-auto justify-between py-15 gap-6">
+          <div key={id} className="friend-details flex flex-col md:flex-row max-w-277.5 w-[90%] lg:w-[70%] mx-auto justify-between items-center md:items-start py-10 gap-6">
             <ToastContainer />
-            <div className="friend space-y-1 flex flex-col items-center">
+            <div className="friend py-10 px-5 w-fit shadow-[0_0_2px_#000]/40 space-y-1 flex flex-col items-center">
               <img className="rounded-full w-20" src={picture} alt={name} />
               <h1 className="font-semibold text-[20px]">{name}</h1>
               <div className="status grid place-items-center">
@@ -86,7 +86,7 @@ const FriendDetails = () => {
             </div>
 
             <div className="friend-contact">
-              <div className="goal grid grid-cols-3 gap-6">
+              <div className="goal grid grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="goal-card space-y-1 py-8 px-4 text-center rounded shadow-[0px_0px_2px_#000]/30">
                   <h1 className="text-3xl font-semibold primary">
                     {days_since_contact}
@@ -97,7 +97,7 @@ const FriendDetails = () => {
                   <h1 className="text-3xl font-semibold primary">{goal}</h1>
                   <p className="secondary text-[14px]">Goal(Days)</p>
                 </div>
-                <div className="goal-card space-y-1 py-8 px-4 text-center rounded shadow-[0px_0px_2px_#000]/30">
+                <div className="goal-card space-y-1 py-8 px-4 text-center rounded shadow-[0px_0px_2px_#000]/30 col-span-2 md:col-auto">
                   <h1 className="text-3xl font-semibold primary">{next_due_date}</h1>
                   <p className="secondary text-[14px]">Next Due Date</p>
                 </div>
