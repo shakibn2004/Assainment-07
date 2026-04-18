@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(localStorage.getItem("status"));
+  const [toggle, setToggle] = useState();
   const [menu, setMenu] = useState(false);
   return (
     <div className="sticky top-0 bg-white z-10">
